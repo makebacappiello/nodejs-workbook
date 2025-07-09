@@ -1,27 +1,32 @@
 /* 
 
-Your task: Make a dog age calculator with Node.js!
+To run this file use the node command:
 
-Follow the instructions in the README.md file in this folder.
-
-Run this file with the node command:
-node dogAgeCalculator.js
+node dogAgeCalculator.js petName (Number to represent dog Years)
 
 */
+
 console.log(process.argv);
 
 let dogName = process.argv[2];
-let dogYear = 1;
-let humanYear = 15 * dogYear
+let dogYear = Number(process.argv[3]);
+let humanYear;
 
-
-let yearTwoDogs = dogYear + 9;
-let yearThreeDogs = yearTwoDogs + 5;
-// 29 
-laterYears = 
 //if else statements will help this code
 
-1 human year = 15 dog years
-2 human years = 15 dog years + 9 dog years
-3 human years = 15 + 9 + 5 = 29 dog years
-4 human years = 15 + 9 + 5 +5 = 34 dog years
+if (dogYear === 1) {
+  humanYear = 15;
+} else if (dogYear === 2) {
+  humanYear = 15 + 9;
+} else if (dogYear > 2) {
+  let overTwoYears = dogYear - 2;
+  humanYear = 24 + overTwoYears * 5;
+} else {
+  console.log(
+    "You did not enter whole numbers greater than 0 for the dog's age"
+  );
+}
+
+console.log(
+  `Your dog ${dogName} is ${dogYear} years old, but that's ${humanYear} years old in dog years!`
+);
