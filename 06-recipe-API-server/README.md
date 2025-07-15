@@ -20,8 +20,9 @@ You'll use Express to build a web server that exposes API endpoints for reading 
 To get started, you will need to do the following:
 
 1. In your `06-recipe-API-server` project folder, run `npm init -y` to initialize your `package.json` file.
-2. In the `package.json` file, add the key/value pair `"type": "module"` in order to use the modern ES Module syntax.
-3. Write your server code in the src/index.js file:
+1. In the Terminal, in your `07-animals-API-server-SQL` project folder, run `npm install express` to install the `express` package. You should then see `express` listed in your `package.json` file as a dependency.
+1. In the `package.json` file, add the key/value pair `"type": "module"` in order to use the modern ES Module syntax.
+1. Write your server code in the src/index.js file:
 
    - Set up your Express server using the boilerplate code
    - Define your API endpoints using `app.get()`
