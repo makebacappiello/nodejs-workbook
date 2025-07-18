@@ -58,10 +58,10 @@ async function deleteOneAnimal(animalName) {
 // Helper function for /update-one-animal
 
 async function updateOneAnimal(animal) {
-  await db.query("UPDATE animals SET category = $1 WHERE name = $2", [
-    animal.category,
-    animal.name,
-  ]);
+  await db.query(
+    "UPDATE animals SET category = $1, can_fly = $2, lives_in = $3 WHERE name = $4",
+    [animal.category, animal.can_fly, animal.lives_in, animal.name]
+  );
 }
 // Helper function for /add-one-animal
 
