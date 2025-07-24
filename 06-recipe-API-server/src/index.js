@@ -52,8 +52,7 @@ async function getOneRecipie(recipieIndex) {
 
 // This is the API Endpoint for handling GET requests to /get-all-recipes
 // When the user visits /get-all-recipies, it:
-1;
-//Calls getAllRecipies().
+//1.Calls getAllRecipies().
 //2.Logs the recipes to your terminal.
 
 app.get("/get-all-recipies", async (req, res) => {
@@ -73,7 +72,7 @@ app.get("/get-one-recipie/:index", async (req, res) => {
 
   // We use this constant to define that the program must wait to get the recipie from the data.json
   const recipie = await getOneRecipie(recipieIndex);
-  console.log(recipie, `THESE IS THE RECIPIE FROM ${recipieIndex}`);
+  console.log(recipie, `THIS IS THE RECIPIE FROM ${recipieIndex}`);
 
   // then send the recipie back in the response
 
